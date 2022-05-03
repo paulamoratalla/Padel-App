@@ -1,0 +1,19 @@
+<div class="container">
+
+    <h1>Clubs de padel</h1>
+
+    <hr>
+
+    <div class="row align-items-center club-list">
+        {{#each clubs}}
+        <div class="col-sm-4">
+            <a href="/clubs/{{id}}">
+                <img alt="club pic" src="{{image}}" class="figure-img img-fluid rounded">
+            </a>
+            <h4>{{name}}</h4>
+            <small class="text-muted">{{address.city}}</small>
+        </div>
+
+        {{/each}}
+    </div>
+</div>

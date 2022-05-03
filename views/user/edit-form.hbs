@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col"></div>
+
+        <h1>Hola {{name}}</h1>
+
+        <hr>
+
+        <form action="/perfil/{{_id}}/editar" method="POST" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{name}}">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" value="{{email}}">
+            </div>
+            <div class="mb-3">
+                <label for="avatar" class="form-label">Foto de perfil</label>
+                <input class="form-control" type="file" id="avatar" name="avatarFile" value="{{avatar}}">
+            </div>
+
+
+            <hr>
+
+            <button type="submit" class="btn btn-dark">Guardar</button>
+            <a href="/perfil" class="btn btn-dark">Volver</a>
+
+
+
+        </form>
+        <form action="/perfil/{{_id}}/eliminar" method="POST">
+            <button class="btn btn-dark" type="submit">Eliminar perfil</button>
+        </form>
+
+    </div>
+</div>

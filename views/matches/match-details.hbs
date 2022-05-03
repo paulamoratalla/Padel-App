@@ -1,0 +1,130 @@
+<div class="container">
+    <h1>Detalles del partido</h1>
+
+    <hr>
+
+    <p hidden id="latitudeMatch">{{detMatch.club.location.coordinates.[0]}}</p>
+    <p hidden id="longitudeMatch">{{detMatch.club.location.coordinates.[1]}}</p>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="/clubs/{{detMatch.club.id}}">
+                <img alt="club pic" src="{{detMatch.club.image}}" class="figure-img img-fluid rounded"
+                    style="width: 700px; height: 400px; object-fit: cover;">
+            </a>
+
+            <h4>{{detMatch.club.name}}</h4>
+        </div>
+
+        <div class="col-md-4">
+            <div class="title1">
+                <h5>Hora:</h5>{{date}}
+            </div>
+            <div class="title2">
+                <h5>Dia:</h5>{{day}}
+            </div>
+            <h4>Jugadores</h4>
+
+            <div class="row">
+                {{#each detMatch.players}}
+                <div class="col-md-3">
+                    <img class="matchplayers" src="{{avatar}}">
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {{#if isPlayer}}
+            <form action="/partidos/{{detMatch.id}}/desunirse" method="POST">
+                <button class="btn btn-outline-info" type="submit">Abandonar partido</button>
+            </form>
+            {{else}}
+            <form action="/partidos/{{detMatch.id}}/unirse" method="POST">
+                <button class="btn btn-outline-info" type="submit">Unirse al partido</button>
+            </form>
+            {{/if}}
+
+            {{#if result.set1.team1}}
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Resultado del partido
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{result.set1.team1}} - {{result.set1.team2}}</li>
+                    <li class="list-group-item">{{result.set2.team1}} - {{result.set2.team2}}</li>
+                    <li class="list-group-item">{{result.set3.team1}} - {{result.set3.team2}}</li>
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="/partidos" class="btn btn-dark">Volver a la lista de partidos</a>
+        </div>
+
+        <div class="col-md-3">
+            {{#if isCreator}}
+            <a href="/partidos/{{detMatch.id}}/resultado" class="btn btn-secondary">Introducir resultado</a>
+            {{/if}}
+        </div>
+        <div class="col-md-2">
+            {{#if isCreator}}
+            <a href="/partidos/{{detMatch.id}}/edit" class="btn btn-warning">Editar partido</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row align-items-center">
+        <figure id="matchMap"></figure>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row reviews-form">
+        <form action="/comentario/{{detMatch.id}}/crear" method="POST">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                        <h5>Chat de partido</h5>
+                    </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="content"
+                        type="text"></textarea>
+                </div>
+
+
+                <div class="col-sm-2 mt-5">
+                    <button type="submit" class="btn btn-outline-dark" style="width: 7rem;">Enviar</button>
+                </div>
+        </form>
+    </div>
+</div>
+
+<div class="container comments-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Comentarios</h5>
+            {{#each comments}}
+            <div class="card comments" style="width: 33rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <p class="card-text">{{content}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/details-maps.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtf8mk6VyrR7KMMLz5WRmqhcbrtuTYDCg&callback=initMap"></script>

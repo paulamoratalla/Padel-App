@@ -1,0 +1,111 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Crear club de Padel</h1>
+
+            <hr>
+
+            <form action="/clubs/crear" method="POST" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="street" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="street" name="street">
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="city" name="city">
+                </div>
+                <div class="mb-3">
+                    <label for="zip" class="form-label">Código Postal</label>
+                    <input type="text" class="form-control" id="zip" name="zip">
+                </div>
+                <div class="mb-3" hidden>
+                    <label for="latitude" class="form-label">Latitud</label>
+                    <input type="text" class="form-control" id="latitudeIn" name="latitude">
+                </div>
+                <div class="mb-3" hidden>
+                    <label for="longitude" class="form-label">Longitud</label>
+                    <input type="text" class="form-control" id="longitudeIn" name="longitude">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Imagen</label>
+                    <input type="file" class="form-control" id="image" name="imageFile">
+                </div>
+                <div class="mb-3">
+                    <label for="numberOfFields" class="form-label">Pistas disponibles</label>
+                    <input type="text" class="form-control" id="numberOfFields" name="numberOfFields">
+                </div>
+                <div class="mb-3">
+                    <label for="web" class="form-label">Web</label>
+                    <input type="text" class="form-control" id="web" name="web">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="phone" name="phone">
+                </div>
+
+                <h6>Horario</h6>
+                <div class="row align-items-center">
+                    <p>Lunes - Viernes</p>
+                    <div class="col">
+                        <label for="weekdaysFrom" class="form-label">Desde</label>
+                        <input type="time" class="form-control" id="weekdaysFrom" name="weekdaysFrom">
+                    </div>
+                    <div class="col">
+                        <label for="weekdaysTo" class="form-label">Hasta</label>
+                        <input type="time" class="form-control" id="weekdaysTo" name="weekdaysTo">
+                    </div>
+                    <p>Sábado - Domingo</p>
+                    <div class="col">
+                        <label for="weekendsFrom" class="form-label">Desde</label>
+                        <input type="time" class="form-control" id="weekendsFrom" name="weekendsFrom">
+                    </div>
+                    <div class="col">
+                        <label for="weekendsTo" class="form-label">Hasta</label>
+                        <input type="time" class="form-control" id="weekendsTo" name="weekendsTo">
+                    </div>
+                    <p>Festivos</p>
+                    <div class="col">
+                        <label for="holidaysFrom" class="form-label">Desde</label>
+                        <input type="time" class="form-control" id="holidaysFrom" name="holidaysFrom">
+                    </div>
+                    <div class="col">
+                        <label for="holidaysTo" class="form-label">Hasta</label>
+                        <input type="time" class="form-control" id="holidaysTo" name="holidaysTo">
+                    </div>
+
+                    <div class="clubcreate-map">
+                        <p>Localización</p>
+                        <style class="clubcreate-map">
+                            #matchMap {
+                                height: 300px;
+                                background-color: red;
+                                margin-top: 10px;
+                            }
+                        </style>
+
+                        <figure id="matchMap"></figure>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-dark">Crear club</button>
+                        <a href="/" class="btn btn-dark">Volver al inicio</a>
+                    </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/match-map.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtf8mk6VyrR7KMMLz5WRmqhcbrtuTYDCg&callback=initMap"></script>

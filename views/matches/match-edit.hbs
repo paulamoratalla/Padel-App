@@ -1,0 +1,49 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Editar Partido</h1>
+
+            <hr>
+
+            <form action="/partidos/{{editMatch.id}}/edit" method="POST">
+
+                <div class="mb-3">
+                    <label for="date" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="date" name="date" value="{{date}}">
+                </div>
+                <div class="mb-3">
+                    <label for="genre" class="form-label">Genero</label>
+                    <select id="genre" class="form-select" name="genre">
+                        <option value="Mixto">Mixto</option>
+                        <option value='Femenino'>Femenino</option>
+                        <option value='Masculino'>Masculino</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Lugar</label>
+                    <select id="club" class="form-select" name="club">
+                        {{#each clubs}}
+                        <option value="{{id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-dark">Guardar edición</button>
+                <a href="/" class="btn btn-dark">Volver al incio</a>
+            </form>
+
+                {{#each editMatch.players}}
+                <div value="{{id}}">{{name}}</div>
+                <form action="/partidos/{{../editMatch.id}}/edit/eliminar-jugador/{{id}}" method="POST">
+                    <button class="btn btn-sm btn-warning" type="submit">Eliminar</button>
+                </form>
+                {{/each}}
+
+            <hr>
+
+        </div>
+    </div>
+
+</div>

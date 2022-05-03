@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Crear nuevo partido</h1>
+
+            <hr>
+
+            <form action="/partidos/crear" method="POST">
+
+                <div class="mb-3">
+                    <label for="date" class="form-label">Fecha y Hora</label>
+                    <input type="datetime-local" class="form-control" id="date" name="date">
+                </div>
+                <div class="mb-3">
+                    <label for="club" class="form-label">Club de padel</label>
+                    <select id="club" class="form-select" name="club">
+                        {{#each clubes}}
+                        <option value="{{id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="price" name="price">
+                </div>
+                <div class="mb-3">
+                    <label for="genre" class="form-label">Genero</label>
+                    <select id="genre" class="form-select" name="genre">
+                        <option value="Mixto">Mixto</option>
+                        <option value='Femenino'>Femenino</option>
+                        <option value='Masculino'>Masculino</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-dark">Crear partido</button>
+                <a href="/partidos" class="btn btn-dark">Volver a la lista de partidos</a>
+            </form>
+        </div>
+    </div>
+</div>

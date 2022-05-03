@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Introduce el resultado del partido</h1>
+
+    <hr>
+
+    <form action="/partidos/{{_id}}/resultado" method="POST">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-1">
+                <h4>Set 1</h4>
+                <label for="set1team1" class="form-label">Pareja 1</label>
+                <input type="text" class="form-control" id="set1team1" name="set1team1">
+                <label for="set1team2" class="form-label">Pareja 2</label>
+                <input type="text" class="form-control" id="set1team2" name="set1team2">
+            </div>
+
+            <div class="col-md-1">
+                <h4>Set 2</h4>
+                <label for="set2team1" class="form-label">Pareja 1</label>
+                <input type="text" class="form-control" id="set2team1" name="set2team1">
+                <label for="set2team2" class="form-label">Pareja 2</label>
+                <input type="text" class="form-control" id="set2team2" name="set2team2">
+            </div>
+
+            <div class="col-md-1">
+                <h4>Set 3</h4>
+                <label for="set3team1" class="form-label">Pareja 1</label>
+                <input type="text" class="form-control" id="set3team1" name="set3team1">
+                <label for="set3team2" class="form-label">Pareja 2</label>
+                <input type="text" class="form-control" id="set3team2" name="set3team2">
+            </div>
+
+
+            <div class="col-md-1 problem-button">
+                <button type="submit" class="btn btn-dark">Guardar</button>
+            </div>
+            <div class="col-md-3 problem-button">
+                <a href="/partidos" class="btn btn-dark">Volver a detalles del partido</a>
+            </div>
+        </div>
+    </form>
+</div>

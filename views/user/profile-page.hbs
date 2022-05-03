@@ -1,0 +1,60 @@
+<div class="container profile">
+    <div class="row align-items-start">
+
+        <div class="col">
+            <img src="{{userDet.avatar}}" class="img-fluid profile" alt="profile picture">
+        </div>
+
+        <div class="col-7">
+            <h1>Perfil de {{userDet.name}}</h1>
+            <hr>
+            <a href="/perfil/{{userDet._id}}/editar" class="btn btn-warning">Editar perfil</a>
+            <a href="/partidos/crear" class="btn btn-dark">Crear partido</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3>Clubs Favoritos</h3>
+
+    <div class="row align-items-center">
+        {{#each userDet.favouriteClubs}}
+        <div class="col-sm-3 favClubs">
+            <a href="/clubs/{{id}}">
+                <img alt="club pic" src="{{image}}" class="figure-img img-fluid rounded">
+            </a>
+            <h5 class="header">{{name}}</h5>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="container match-cards">
+
+    <h3>Partidos disponibles</h3>
+
+    <div class="row match-list">
+        {{#each matchDet}}
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="col">
+                        <h5 class="card-title">{{../day}} {{../date}}</h5>
+                        <h5 class="card-text">{{club.name}}</h5>
+                    </div>
+                    <div class="col avatarimg">
+                        <p> Numero Jugadores:</p>
+                        {{#each players}}
+                        <img src="{{avatar}}" class="imgavatar" alt="imagen perfil">
+                        {{/each}}
+                    </div>
+                    <p class="card-text"> <strong>Genero: </strong>{{genre}}</p>
+                    <p class="card-text"> <strong> Precio: </strong>{{price}}€</p>
+                    <a href=" /partidos/{{_id}}" class="btn btn-outline-dark">Ir al partido</a>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

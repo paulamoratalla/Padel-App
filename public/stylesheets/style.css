@@ -1,0 +1,289 @@
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* overflow: auto; */
+    /* background-color: aqua; */
+    /* background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png"); */
+    background-image: url("https://fotografias.antena3.com/clipping/cmsimages02/2021/10/25/EB3767FF-1E84-4602-8E6A-D4957D86A34E/98.jpg?crop=1920,1080,x0,y200&width=1900&height=1069&optimize=low&format=webply");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.index-elements {
+    text-align: center;
+    margin-top: 230px;
+}
+
+.match-list {
+    margin-bottom: 20px;
+}
+
+.match-list-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn.btn-dark {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: solid 1px transparent;
+}
+
+.btn.btn-warning {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: solid 1px transparent;
+}
+
+.problem-button {
+    margin-top: 120px;
+}
+
+.btn.btn-danger {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: solid 1px transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn.btn-outline-dark {
+    border-radius: 30px;
+    border: solid 1px black;
+}
+
+.btn.btn-outline-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: solid 1px lightskyblue;
+}
+
+.btn.btn-secondary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: solid 1px transparent;
+}
+
+.navbar-parent {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    width: 100px;
+}
+
+.row.align-items-center {
+    margin-bottom: 50px;
+}
+
+.rounded {
+    width: 700px;
+    height: 200px;
+}
+
+.btn.btn-light {
+    margin-top: 100px;
+}
+
+.container.profile {
+    margin-top: 50px;
+}
+
+.clubs {
+    margin: 100px;
+}
+
+.followersPic {
+    border-radius: 100%;
+    border: solid 1px white;
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.phone {
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.web {
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.imgavatar {
+    border-radius: 100%;
+    border: solid 1px white;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    align-content: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.container2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.club-list img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.club-list .col-sm-4 {
+    margin-bottom: 30px;
+}
+
+.btn-outline-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.backgroundimg {
+    width: 1450px;
+    object-fit: cover;
+    margin-left: 0px;
+}
+
+#matchMap {
+    height: 300px;
+    background-color: red;
+}
+
+#clubsMap {
+    height: 300px;
+    background-color: red;
+}
+
+#detailsMap {
+    height: 300px;
+    background-color: red;
+}
+
+.imgclubprof {
+    height: 100px;
+}
+
+.clubcreate-map {
+    margin-top: 30px;
+}
+
+.btn-secondary.like {
+    margin-top: 20px;
+}
+
+.btn-danger.like {
+    margin-top: 20px;
+}
+
+.btn-warning.like {
+    margin-top: 22px;
+}
+
+.matchplayers {
+    border-radius: 100%;
+    border: solid 1px white;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    align-content: center;
+}
+
+.card.comments {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.clubmatch {
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.fav-clubs {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: solid 1px transparent;
+    margin-top: 20px;
+}
+
+.profile {
+    border-radius: 10px;
+    border: solid 1px transparent;
+    object-fit: cover;
+}
+
+.favClubs {
+    align-content: center;
+    align-self: center;
+}
+
+.header {
+    margin-top: 20px;
+    align-content: center;
+}
+
+.comments-container {
+    margin-bottom: 100px;
+}
+
+.title1 {
+    margin-bottom: 20px;
+}
+
+.title2 {
+    margin-bottom: 20px;
+}
